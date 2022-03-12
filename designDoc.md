@@ -179,11 +179,40 @@ flowchart TD;
 
 ```mermaid
 sequenceDiagram
-    participant 客户端
-    participant 服务器
-    客户端->>服务器: Hi 
-    服务器->>客户端: Hi
-    客户端-)服务器: Hi
+    autonumber
+    
+    Actor 用户
+    participant 客户端主程序
+    participant 客户端用户身份验证程序
+    participant 服务器端用户身份验证程序
+    participant 服务器端主程序
+
+    用户 ->> 客户端主程序: 访问客户端主程序
+    activate 客户端主程序
+        客户端主程序 ->> 客户端用户身份验证程序: 转至登录界面
+        activate 客户端用户身份验证程序
+            客户端用户身份验证程序 ->> 服务器端用户身份验证程序: 提交用户查询请求
+            activate 服务器端用户身份验证程序
+                服务器端用户身份验证程序 ->> 服务器端用户身份验证程序: 查询用户信息摘要表
+                服务器端用户身份验证程序 -->> 客户端用户身份验证程序: 返回用户查询结果
+                activate 服务器端主程序
+                    loop Every minute
+                        服务器端用户身份验证程序 ->> 服务器端主程序: 通知用户登录验证结果
+                        服务器端主程序 --) 服务器端用户身份验证程序: 登录状态
+                    end
+                deactivate 服务器端主程序
+            deactivate 服务器端用户身份验证程序
+            客户端用户身份验证程序 -->> 客户端主程序: 返回用户查询结果
+        deactivate 客户端用户身份验证程序
+        activate 服务器端主程序
+            loop Every minute
+                客户端主程序 ->> 服务器端主程序: 完成身份验证，转至主程序登录界面
+                服务器端主程序 --) 客户端主程序: 返回用户登录状态
+            end
+        deactivate 服务器端主程序
+    deactivate 客户端主程序
+
+    %% this is a comment 本图仅描述成功登录情况，未包含登录失败问题，比如网络异常、用户名密码错误等
  
 ```
 ### 性能
