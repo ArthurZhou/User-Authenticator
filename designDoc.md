@@ -1,7 +1,4 @@
-#日记 #工作 
 
-## day planner
-- [ ] 10:00 - 12:00 给周羿天新项目写需求和设计文档
 ## diary
 ### 给周羿天的新项目[User-Authenticator]写需求和设计
 
@@ -142,7 +139,7 @@ flowchart TD;
 本地加盐
 
 ### 加密算法模型
-为了考虑安全性，使用了(SHA-256加密算法)[https://zh.wikipedia.org/w/index.php?title=SHA256&redirect=no]
+为了考虑安全性，使用了[SHA-256加密算法](https://zh.wikipedia.org/w/index.php?title=SHA256&redirect=no)
 
 ### 输出结果评价
 用户ID
