@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+fm/key.lock
+interpreter.py
+fm/FM-O3-Alpha0.12.0-Server.py
+fm/config.txt
+fm/2/FM-O3-Alpha0.12.0-Client.py
+fm/2/config.txt
+fm/.DS_Store
+.idea/vcs.xml
+.idea/User-Authenticator.iml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.DS_Store
