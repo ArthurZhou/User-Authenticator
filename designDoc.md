@@ -1,4 +1,7 @@
+#日记 #工作 
 
+## day planner
+- [ ] 10:00 - 12:00 给周羿天新项目写需求和设计文档
 ## diary
 ### 给周羿天的新项目[User-Authenticator]写需求和设计
 
@@ -139,7 +142,13 @@ flowchart TD;
 本地加盐
 
 ### 加密算法模型
-为了考虑安全性，使用了[SHA-256加密算法](https://zh.wikipedia.org/w/index.php?title=SHA256&redirect=no)
+*！已修改为SHA256*
+
+考虑到前期开发难度和能力，建议使用简单的算法，可以使用[[MD5 |MD5信息摘要算法]]
+
+后期提高安全性，建议使用国密算法 SM3 或者[[SHA256 |SHA-256算法]]
+
+但是需要设计成支持用户对不同加密算法的主动选择。
 
 ### 输出结果评价
 用户ID
@@ -213,7 +222,7 @@ sequenceDiagram
 ### 兼容性
 
 ### 开发环境
-Python 3.7.2
+Python 3.7。2
 
 
 
@@ -223,5 +232,7 @@ Python 3.7.2
 ## 版本规划和开发时间
 
 ## 风险评估
-1. Python提供的算法包安全隐患
-2. HTTPS协议的安全隐患 
+1. MD5 信息摘要算法的安全隐患，已知具有被碰撞的可能https://www.view.sdu.edu.cn/info/1003/11424.htm
+2. Python提供的算法包安全隐患
+3. HTTPS协议的安全隐患
+4. 
