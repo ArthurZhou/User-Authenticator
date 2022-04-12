@@ -3,6 +3,9 @@
 ## English
 A way to vertify users between servers and clients on the Internet.
 
+### *Announcement*
+All server-side version after v0.3.0-alpha include a logger from [BirchLog](https://github.com/ArthurZhou/BirchLog).
+
 ### Functions
 - User's username and password do not need to be transmitted in clear text
 - Servers do not store information that can be reversed
@@ -14,6 +17,9 @@ You may have some questions while reading the source codes,[this](https://github
 
 ## 中文
 一种在互联网中程序和用户间进行验证的思路。
+
+### *公告*
+所有服务端alpha0.3.0之后的版本都包含了一个来自[BirchLog](https://github.com/ArthurZhou/BirchLog)的日志记录器。
 
 ### 功能
 - 用户的用户名密码不需要使用明文传输
